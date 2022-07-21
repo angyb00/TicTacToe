@@ -5,23 +5,32 @@ struct ticTacToeGame: View {
 
     var body: some View {
         VStack {
+            HStack {
+                Text("Score: \(game.score)")
+                    .font(.title2)
+                Spacer()
+            }
             gameBody
+            Spacer()
+            Spacer()
         }.disabled(game.isScreenDisabled)
             .padding()
             .alert(item: $game.alert, content: { alert in
-                Alert(title: alert.header, message: alert.bodyMsg, dismissButton: .default(alert.buttonMsg, action: { game.restart() }))
+                Alert(title: alert.header, message: alert.bodyMsg, dismissButton: .default(alert.buttonMsg, action: { game.restart()
+                }))
             })
     }
 
+    // game board
     var gameBody: some View {
         GeometryReader { geometry in
             VStack {
                 Spacer()
                 LazyVGrid(columns: game.columns) {
-                    ForEach(0..<game.positions.count) { i in
+                    ForEach(0 ..< 9) { i in
                         ZStack {
                             circleView(size: geometry.size)
-                            Image(systemName: game.model.positions[i]?.indicate ?? "")
+                            Image(systemName: game.positions(in:i)?.indicate ?? "")
                         }.onTapGesture {
                             game.choose(index: i)
                         }

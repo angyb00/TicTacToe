@@ -15,12 +15,17 @@ class gameViewModel: ObservableObject {
     var columns:[GridItem] {
         return self.column
     }
-    var positions: [moves?]{
-        return model.positions
+   
+    var score: Int {
+        return model.score
     }
     
     
     //Intent functions
+    func positions(in index: Int) -> moves? {
+        return model.positions[index]
+    }
+    
     func choose(index: Int) {
         
         if humanTurn(index:index) {
@@ -47,21 +52,19 @@ class gameViewModel: ObservableObject {
             self.isScreenDisabled = false
     }
 }
-    
+    //will calculate computer position and return true if computer wins
     func computerTurn() -> Bool {
         let computerPosition = computeComputerPosition()
         return model.computerTurn(index: computerPosition)
     }
     
-    func setSymbol(index: Int) -> String? { model.setSymbol(index: index)}
-    
-    func blockHuman() -> Int? { model.blockHuman() }
+    //func blockHuman() -> Int? { model.blockHuman() }
     
     func isDraw() -> Bool { model.isDraw() }
     
     func restart(){ model.restart() }
     
-    func isOccupied(index: Int) -> Bool { model.isOccupied(position: index) }
+    //func isOccupied(index: Int) -> Bool { model.isOccupied(position: index) }
     
     func humanTurn(index:Int) -> Bool{ model.humanChoose(index: index) }
     

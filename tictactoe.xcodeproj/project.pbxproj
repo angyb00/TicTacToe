@@ -24,6 +24,7 @@
 		41CD830628691DA6008B7699 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41CD830D286925E8008B7699 /* ticTacToeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ticTacToeGame.swift; sourceTree = "<group>"; };
 		41CD830F28692643008B7699 /* ticTacToeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ticTacToeVM.swift; sourceTree = "<group>"; };
+		41D9DC742875278100749163 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		41DB8BBF28700C9E00AA95B1 /* gameAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +42,7 @@
 		41CD82F328691DA4008B7699 = {
 			isa = PBXGroup;
 			children = (
+				41D9DC742875278100749163 /* README.md */,
 				41CD82FE28691DA4008B7699 /* tictactoe */,
 				41CD82FD28691DA4008B7699 /* Products */,
 			);
