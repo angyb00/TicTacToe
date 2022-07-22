@@ -58,13 +58,9 @@ class gameViewModel: ObservableObject {
         return model.computerTurn(index: computerPosition)
     }
     
-    //func blockHuman() -> Int? { model.blockHuman() }
-    
     func isDraw() -> Bool { model.isDraw() }
     
     func restart(){ model.restart() }
-    
-    //func isOccupied(index: Int) -> Bool { model.isOccupied(position: index) }
     
     func humanTurn(index:Int) -> Bool{ model.humanChoose(index: index) }
     
